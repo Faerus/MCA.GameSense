@@ -1,2 +1,2 @@
-# MCA.GameSense
+# GameSense .NET
 .NET SDK for SteelSeries GameSense
