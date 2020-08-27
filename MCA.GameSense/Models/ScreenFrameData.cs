@@ -18,8 +18,8 @@ namespace MCA.GameSense.Models
         [JsonProperty("bold", NullValueHandling = NullValueHandling.Ignore)]
         public bool? Bold { get; set; }
 
-        [JsonProperty("icon_id", NullValueHandling = NullValueHandling.Ignore)]
-        public EventIcon? Icon { get; set; }
+        [JsonProperty("icon-id", NullValueHandling = NullValueHandling.Ignore)]
+        public EventIcon? IconId { get; set; }
 
         [JsonProperty("arg", NullValueHandling = NullValueHandling.Ignore)]
         public string Arg { get; set; }

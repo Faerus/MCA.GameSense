@@ -36,9 +36,8 @@ namespace MCA.GameSense
         }
 
         /// <summary>
-        /// Your game is automatically registered with SteelSeries Engine the system when you register (see below) or 
-        /// bind (see the handler documents) any events. However, you can use another call to set various pieces of 
-        /// metadata.
+        /// Your game is automatically registered with SteelSeries Engine the system when you register or 
+        /// bind any events. However, you can use another call to set various pieces of metadata.
         /// </summary>
         public HttpResponseMessage RegisterGame(string game, string gameDisplayName = null, string developer = null, int? deinitializeTimeLengthMs = null)
         {
@@ -109,9 +108,6 @@ namespace MCA.GameSense
             return this.Client.PostAsync("remove_game_event", this.SerializeToJsonHttpContent(payload)).Result;
         }
 
-        /// <summary>
-        /// Games communicate with SteelSeries Engine 3 by posting object to Engine
-        /// </summary>
         public HttpResponseMessage SendEvent(string game, string eventName, object eventValue, object frame = null)
         {
             Event payload = new Event()
@@ -127,7 +123,6 @@ namespace MCA.GameSense
 
             return this.Client.PostAsync("game_event", this.SerializeToJsonHttpContent(payload)).Result;
         }
-
 
         private StringContent SerializeToJsonHttpContent<T>(T item)
         {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCA.GameSense", "MCA.GameSense\MCA.GameSense.csproj", "{78D760DD-2B7F-4B58-BC82-2D84448EFDE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCA.GameSense", "MCA.GameSense\MCA.GameSense.csproj", "{78D760DD-2B7F-4B58-BC82-2D84448EFDE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCA.GameSense.Test", "MCA.GameSense.Test\MCA.GameSense.Test.csproj", "{1678282A-BE6B-4BC6-8684-3BB0195D9222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCA.GameSense.Clock", "MCA.GameSense.Test\MCA.GameSense.Clock.csproj", "{1678282A-BE6B-4BC6-8684-3BB0195D9222}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

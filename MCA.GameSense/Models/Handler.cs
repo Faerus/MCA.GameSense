@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace MCA.GameSense.Models
 {
@@ -55,6 +53,7 @@ namespace MCA.GameSense.Models
         [JsonProperty("mode"), JsonConverter(typeof(StringEnumConverter))]
         public Mode Mode { get; set; }
 
+        // TODO: create handler data class hierarchy
         [JsonProperty("datas", NullValueHandling = NullValueHandling.Ignore)]
         public IEnumerable<ScreenFrameData> Data { get; set; }
     }
