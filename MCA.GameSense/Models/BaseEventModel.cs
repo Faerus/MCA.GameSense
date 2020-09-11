@@ -8,7 +8,7 @@ namespace MCA.GameSense.Models
         /// Event identifier, mandatory
         /// Limited to uppercase A-Z, 0-9, hyphen, and underscore characters.
         /// </summary>
-        [JsonProperty("event")]
+        [JsonProperty("event", Order = -2)]
         public string Event { get; set; }
     }
 }

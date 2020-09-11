@@ -8,7 +8,7 @@ namespace MCA.GameSense.Models
         /// Game identifier, mandatory
         /// Limited to uppercase A-Z, 0-9, hyphen, and underscore characters.
         /// </summary>
-        [JsonProperty("game")]
+        [JsonProperty("game", Order = -3)]
         public string Game { get; set; }
     }
 }
