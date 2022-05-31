@@ -14,7 +14,7 @@ namespace MCA.GameSense.Clock
         private const string GAME_ID = "CLOCK";
         private const string EVENT_ID = "TICK";
 
-        private static float TotalPhysicalMemoryGo = new ComputerInfo().TotalPhysicalMemory / 1024f / 1024f / 1024f;
+        private static float TotalPhysicalMemoryGo = 16;// new ComputerInfo().TotalPhysicalMemory / 1024f / 1024f / 1024f;
         private static float TotalGpuMemoryGo = 8; // TODO: programatically find this value
 
         private static GameSenseClient GameSense { get; set; }
@@ -98,8 +98,8 @@ namespace MCA.GameSense.Clock
             // Send data to SSE
             GameSense.SendEvent(EVENT_ID, DateTime.Now.ToLongTimeString(), new
             {
-                line1 = string.Format("CPU: {0:00.0}% - {1:0.0}/{2:0.0}", cpuUsage, usedRam, TotalPhysicalMemoryGo),
-                line2 = string.Format("GPU: {0:00.0}% - {1:0.0}/{2:0.0}", gpuUsage, usedVram, TotalGpuMemoryGo)
+                line1 = string.Format("CPU: {0:00.0}% - {1:0.0}/{2:0}", cpuUsage, usedRam, TotalPhysicalMemoryGo),
+                line2 = string.Format("GPU: {0:00.0}% - {1:0.0}/{2:0}", gpuUsage, usedVram, TotalGpuMemoryGo)
             });
         }
     }
